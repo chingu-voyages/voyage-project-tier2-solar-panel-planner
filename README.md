@@ -79,7 +79,10 @@ implement to enhance this app, if time permits.
     - Email
     - Phone Number
     - Address (validated against a provided dataset of Los Angeles addresses)
+      - the user can either type their own address manually or
+      - can type the street and then choose from a list of suggested addresses corresponding to the typed street
     - Preferred timeslot
+  - [ ] Allow residets to cancel the form 
   - [ ] Notify residents that their preferred timeslot is only indicative and that they will receive confirmation a few hours before the scheduled visit.
   - [ ] Store the request status (e.g., pending, visited) using local storage or [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API).
   - [ ] Allow residents to cancel an appointment by calling a specific phone number (e.g., 1-800-123-4567) provided in their confirmation message when they submit an appointment application.
