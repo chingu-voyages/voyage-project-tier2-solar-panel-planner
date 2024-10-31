@@ -79,10 +79,11 @@ implement to enhance this app, if time permits.
     - Email
     - Phone Number
     - Address (validated against a provided dataset of Los Angeles addresses)
-      - the user can either type their own address manually or
-      - can type the street and then choose from a list of suggested addresses corresponding to the typed street
+      - The user can either type their own address manually or
+      - Can type the street and then choose from a list of suggested addresses corresponding to the typed street
+      - Implement an autocomplete functionality
     - Preferred timeslot
-  - [ ] Allow residets to cancel the form 
+  - [ ] Allow residents to cancel the form 
   - [ ] Notify residents that their preferred timeslot is only indicative and that they will receive confirmation a few hours before the scheduled visit.
   - [ ] Store the request status (e.g., pending, visited) using local storage or [IndexedDB](https://developer.mozilla.org/en-US/docs/Web/API/IndexedDB_API).
   - [ ] Allow residents to cancel an appointment by calling a specific phone number (e.g., 1-800-123-4567) provided in their confirmation message when they submit an appointment application.
@@ -91,15 +92,15 @@ implement to enhance this app, if time permits.
 
   - [ ] Implement a login system accessible through /admin URL where city hall employees can enter an approved email to access the Admin page (no complex authentication required, emails can be validated against a list in a .env file).
   - [ ] Display all appointment requests submitted by residents.
-  - [ ] Allow employees to retrieve the most efficient planning for a specified time period (e.g., daily, weekly, etc) by selecting a specific type of output: list view, map view or both
+  - [ ] Allow employees to retrieve the most efficient planning for a specified time period (e.g., daily, weekly, etc) by selecting a specific type of output: list view, map view, or both.
   - [ ] Provide an option to export the planned visits (regardless of the type of view selected) in a downloadable format (PDF, Excel, etc.) and which will always include details such as visit time slot, resident’s contact information, and address.
 
   - Algorithmic Planning
 
     - [ ] Develop a scheduling algorithm that optimizes visit order. This algorithm can be implemented in 2 ways (choose one or a combination of both)
-    - [ ] The algorithm can be implemented either by using your own logic rules: using an average time for traffic, using the proximity of an address to another one, always starting with the furthest address etc
+    - [ ] The algorithm can be implemented either by using your own logic rules: using an average time for traffic, using the proximity of an address to another one, always starting with the furthest address, etc
     - [ ] The algorithm can be implemented either by using an external API like Google Routes API or Google Maps API, for calculating distances between 2 addresses for example.
-    - [ ] The algorithl can be implemented by using a combination of your own logical rules and an external API 
+    - [ ] The algorithm can be implemented by using a combination of your own logical rules and an external API 
     - [ ] Prioritize efficiency, aiming to minimize travel time between consecutive visits.
     - [ ] Example Simple Algorithm: For adjacent addresses, order them by street name and house number for consecutive visits and attempt to respect the preffered timeslot selected by the resident.
     
@@ -113,8 +114,8 @@ implement to enhance this app, if time permits.
   - [ ] Use responsive design techniques to ensure the application is accessible and functional across various devices and screen sizes.
 
 ### Extras (Not Required)
-
-- [ ] Implement the "Address" field with dropdown and autocomplete functionality.
+- Admin Interface
+  - [ ] Implement a "Mark as visited" functionality, to signify that a resident has been visited.
 
 ## Acceptance Criteria
 
@@ -127,7 +128,7 @@ implement to enhance this app, if time permits.
 - Admin Interface
 
   - [ ] Admins can view all resident requests.
-  - [ ] Admins can generate an the optimized visit schedule in a map format where each point on the map corresponds to an address and has a sequence associated with it which indicates the order in which the addresses should be visited. 
+  - [ ] Admins can generate an optimized visit schedule in a map format where each point on the map corresponds to an address and has a sequence associated with it which indicates the order in which the addresses should be visited. 
   - [ ] Admins can generate an optimized visit schedule in a list format in the order in which addresses should be visited 
   - [ ] Admins can export any of these views, and each export should also contain the details of each resident like name, contact details and actual address 
   - [ ] The login restricts access to approved city hall employee emails only.
